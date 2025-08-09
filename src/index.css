@@ -1,0 +1,13 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;  /* not 100vw */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(to bottom, #fef9f9, #fff); /* Correct syntax */
+}
