@@ -3,7 +3,6 @@ import { X } from 'lucide-react';
 import community1 from '../assets/community-1.jpg';
 import community2 from '../assets/community-2.jpg';
 import community3 from '../assets/community-3.jpg';
-import '@fontsource/inter';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -33,12 +32,9 @@ const Gallery = () => {
       id="gallery"
       style={{
             padding: '5rem 1rem',
-            backgroundColor: '#ffffff', 
-            marginTop: '2rem',
-            fontFamily: 'system-ui, sans-serif',
+            background: 'linear-gradient(to bottom, #fafaf9 0%, #f3f8fe 100%)', 
             boxSizing: 'border-box',
             width: '100%',
-            borderRadius: '2rem',
             boxShadow: '0 4px 15px #ecdde7ff',
       }}
     >
@@ -65,7 +61,7 @@ const Gallery = () => {
           </h2>
           <p
             style={{
-              fontSize: '1.1rem',
+              fontSize: '0.875rem',
               color: '#64748b',
               maxWidth: 720,
               margin: '0 auto',
@@ -132,10 +128,10 @@ const Gallery = () => {
                     color: 'white',
                   }}
                 >
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.25rem' }}>
+                  <h3 style={{ fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.25rem' }}>
                     {image.title}
                   </h3>
-                  <p style={{ fontSize: '0.9rem', opacity: 0.9 }}>{image.description}</p>
+                  <p style={{ fontSize: '0.875rem', opacity: 0.9 }}>{image.description}</p>
                 </div>
               </div>
             </div>
@@ -198,13 +194,14 @@ const Gallery = () => {
               margin: '0 auto',
             }}
           >
-            <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: '600', marginBottom: '1rem' }}>
               Join Our Growing Community
             </h3>
             <p
               style={{
                 color: '#64748b',
                 marginBottom: '1.5rem',
+                fontSize: '0.875rem',
               }}
             >
               Be part of a supportive network that celebrates the journey of motherhood.

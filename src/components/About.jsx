@@ -1,15 +1,16 @@
 import { Heart, Users, Shield } from 'lucide-react';
 
 const About = () => {
+  const gradientBg = "linear-gradient(to bottom, #fafaf9 0%, #f3f8fe 100%)";
   return (
     <section
       id="about"
       style={{
         padding: 0,
-        fontFamily: 'system-ui, sans-serif',
         boxSizing: 'border-box',
         width: '100%',
         marginTop: '-32px',
+        background: gradientBg,
       }}
     >
       <div
@@ -42,7 +43,7 @@ const About = () => {
           </h2>
           <p
             style={{
-              fontSize: '1.125rem',
+              fontSize: '0.875rem',
               color: '#64748b',
               maxWidth: 720,
               margin: '0 auto',
@@ -63,6 +64,8 @@ const About = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
             gap: '2rem',
             marginBottom: '4rem',
+            marginLeft: '5rem',
+            marginRight: '5rem',
           }}
         >
           {[
@@ -122,7 +125,7 @@ const About = () => {
               >
                 {item.title}
               </h3>
-              <p style={{ color: '#64748b', margin: 0 }}>{item.text}</p>
+              <p style={{ color: '#64748b', margin: 0, fontSize: '0.875rem' }}>{item.text}</p>
             </div>
           ))}
         </div>
@@ -135,6 +138,8 @@ const About = () => {
             padding: '2rem',
             boxShadow: '0 6px 20px rgba(0,0,0,0.06)',
             boxSizing: 'border-box',
+            marginLeft: '5rem',
+            marginRight: '5rem',
           }}
         >
           <div
@@ -161,6 +166,7 @@ const About = () => {
                   lineHeight: 1.7,
                   maxWidth: '800px',
                   margin: '0 auto',
+                  fontSize: '0.875rem',
                 }}
               >
                 At 9Months, we understand that pregnancy is a unique and personal experience.

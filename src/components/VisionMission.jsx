@@ -2,14 +2,10 @@ import { Eye, Target } from 'lucide-react';
 
 const VisionMission = () => {
   const sectionStyle = {
-    padding: '5rem 1rem 5rem 1rem',
-    backgroundColor: '#ffffff', // light subtle background as in your index.css gradient base
-    fontFamily: 'system-ui, sans-serif',
+    padding: '5rem 0', // Vertical padding only, let grid or container handle horizontal gap
     boxSizing: 'border-box',
     width: '100%',
-    borderRadius: '2rem',
-    boxShadow: '0 4px 15px #ecdde7ff',
-
+    background: '#fff', // or your desired section background
   };
 
   const containerStyle = {
@@ -24,9 +20,10 @@ const VisionMission = () => {
   };
 
   const headingStyle = {
-    fontSize: '2.5rem',
+    fontSize: '2rem',
     fontWeight: 'bold',
     marginBottom: '1.5rem',
+    marginTop: 0,
   };
 
   const gradientTextStyle = {
@@ -37,7 +34,7 @@ const VisionMission = () => {
   };
 
   const paragraphStyle = {
-    fontSize: '1.125rem',
+    fontSize: '0.875rem',
     color: '#64748b',
     maxWidth: 720,
     margin: '0 auto',
@@ -48,6 +45,11 @@ const VisionMission = () => {
     display: 'grid',
     gridTemplateColumns: '1fr',
     gap: '2rem',
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
+    boxSizing: 'border-box',
+    maxWidth: 1050,
+    margin: '0 auto',
   };
 
   const cardStyle = {
@@ -96,10 +98,10 @@ const VisionMission = () => {
 
   const cardText = {
     color: '#64748b',
-    fontSize: '1rem',
+    fontSize: '0.875rem',
     lineHeight: 1.6,
     marginBottom: '1.5rem',
-    textAlign: 'left',
+    textAlign: 'justify',
   };
 
   const listItem = {
@@ -108,6 +110,8 @@ const VisionMission = () => {
     gap: '0.75rem',
     marginBottom: '0.75rem',
     color: '#64748b',
+    fontSize: '0.875rem',
+    textAlign: 'justify',
   };
 
   const bullet = {
@@ -116,6 +120,7 @@ const VisionMission = () => {
     borderRadius: '50%',
     marginTop: 6,
     flexShrink: 0,
+    backgroundColor: '#ca2061',
   };
 
   return (
@@ -135,11 +140,13 @@ const VisionMission = () => {
           {/* Vision Card */}
           <div
             style={cardStyle}
-            onMouseEnter={(e) => {
-              e.currentTarget.querySelector('.bg-circle').style.transform = 'translate(25%, -50%) scale(1.5)';
+            onMouseEnter={e => {
+              e.currentTarget.querySelector('.bg-circle').style.transform =
+                'translate(25%, -50%) scale(1.5)';
             }}
-            onMouseLeave={(e) => {
-              e.currentTarget.querySelector('.bg-circle').style.transform = 'translate(25%, -50%) scale(1)';
+            onMouseLeave={e => {
+              e.currentTarget.querySelector('.bg-circle').style.transform =
+                'translate(25%, -50%) scale(1)';
             }}
           >
             <div className="bg-circle" style={cardBgCircle}></div>
@@ -149,8 +156,8 @@ const VisionMission = () => {
               </div>
               <h3 style={cardHeading}>Our Vision</h3>
               <p style={cardText}>
-                To create a world where every expectant mother feels empowered, supported, 
-                and confident throughout her pregnancy journey. We envision communities 
+                To create a world where every expectant mother feels empowered, supported,
+                and confident throughout her pregnancy journey. We envision communities
                 where maternal health is prioritized and accessible to all.
               </p>
               <div>
@@ -160,7 +167,7 @@ const VisionMission = () => {
                   'Strong community support networks',
                 ].map((text, idx) => (
                   <div key={idx} style={listItem}>
-                    <div style={{ ...bullet, backgroundColor: '#ca2061' }}></div>
+                    <div style={bullet}></div>
                     <span>{text}</span>
                   </div>
                 ))}
@@ -171,22 +178,24 @@ const VisionMission = () => {
           {/* Mission Card */}
           <div
             style={cardStyle}
-            onMouseEnter={(e) => {
-              e.currentTarget.querySelector('.bg-circle').style.transform = 'translate(25%, -50%) scale(1.5)';
+            onMouseEnter={e => {
+              e.currentTarget.querySelector('.bg-circle').style.transform =
+                'translate(25%, -50%) scale(1.5)';
             }}
-            onMouseLeave={(e) => {
-              e.currentTarget.querySelector('.bg-circle').style.transform = 'translate(25%, -50%) scale(1)';
+            onMouseLeave={e => {
+              e.currentTarget.querySelector('.bg-circle').style.transform =
+                'translate(25%, -50%) scale(1)';
             }}
           >
-            <div className="bg-circle" style={{ ...cardBgCircle }}></div>
+            <div className="bg-circle" style={cardBgCircle}></div>
             <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ ...iconContainerStyle}}>
+              <div style={iconContainerStyle}>
                 <Target size={32} color="white" />
               </div>
               <h3 style={cardHeading}>Our Mission</h3>
               <p style={cardText}>
-                To provide comprehensive support, resources, and care for pregnant women 
-                by connecting them with healthcare professionals, building supportive 
+                To provide comprehensive support, resources, and care for pregnant women
+                by connecting them with healthcare professionals, building supportive
                 communities, and ensuring access to reliable information.
               </p>
               <div>
@@ -197,7 +206,7 @@ const VisionMission = () => {
                   'Advocate for maternal health rights',
                 ].map((text, idx) => (
                   <div key={idx} style={listItem}>
-                    <div style={{ ...bullet, backgroundColor: '#ca2061' }}></div>
+                    <div style={bullet}></div>
                     <span>{text}</span>
                   </div>
                 ))}
