@@ -17,7 +17,7 @@ const About = () => {
         style={{
           width: '100%',
           boxSizing: 'border-box',
-           padding: '2rem 2rem', // increased horizontal padding
+           padding: '5rem 5rem', // increased horizontal padding
         }}
       >
         {/* Heading */}
@@ -64,8 +64,7 @@ const About = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
             gap: '2rem',
             marginBottom: '4rem',
-            marginLeft: '5rem',
-            marginRight: '5rem',
+
           }}
         >
           {[
@@ -138,8 +137,7 @@ const About = () => {
             padding: '2rem',
             boxShadow: '0 6px 20px rgba(0,0,0,0.06)',
             boxSizing: 'border-box',
-            marginLeft: '5rem',
-            marginRight: '5rem',
+
           }}
         >
           <div
