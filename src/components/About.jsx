@@ -17,7 +17,7 @@ const About = () => {
         style={{
           width: '100%',
           boxSizing: 'border-box',
-           padding: '5rem 5rem', // increased horizontal padding
+           padding: '5rem 7rem', // increased horizontal padding
         }}
       >
         {/* Heading */}
@@ -28,6 +28,7 @@ const About = () => {
               fontWeight: 'bold',
               marginBottom: '1rem',
               color: '#000',
+              textAlign: 'center',
             }}
           >
             About{' '}
@@ -48,6 +49,7 @@ const About = () => {
               maxWidth: 720,
               margin: '0 auto',
               lineHeight: 1.7,
+              textAlign: 'center',
             }}
           >
             9Months is a compassionate organization dedicated to supporting pregnant women
@@ -165,6 +167,7 @@ const About = () => {
                   maxWidth: '800px',
                   margin: '0 auto',
                   fontSize: '0.875rem',
+                  textAlign: 'center',
                 }}
               >
                 At 9Months, we understand that pregnancy is a unique and personal experience.
