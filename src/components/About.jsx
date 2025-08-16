@@ -17,7 +17,7 @@ const About = () => {
         style={{
           width: '100%',
           boxSizing: 'border-box',
-          padding: '2rem',
+           padding: '2rem 2rem', // increased horizontal padding
         }}
       >
         {/* Heading */}
