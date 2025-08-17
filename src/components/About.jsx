@@ -103,7 +103,6 @@ const About = () => {
                 alignItems: 'center',
                 maxWidth: 340,
                 margin: '0 auto',
-                border: '1px solid #094acaa5',
               }}
             >
               <div
