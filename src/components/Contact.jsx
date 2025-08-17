@@ -1,6 +1,5 @@
 import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
 
-
 const Contact = () => {
   const gradient = "linear-gradient(to right, #ca2061, #f8bbcf)";
 
@@ -42,7 +41,7 @@ const Contact = () => {
       id="contact"
       style={{
         padding: "30px 10px",
-        background: 'linear-gradient(to bottom, #fafaf9 0%, #f3f8fe 100%)', 
+        background: "linear-gradient(to bottom, #fafaf9 0%, #f3f8fe 100%)",
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
@@ -66,7 +65,7 @@ const Contact = () => {
           <p
             style={{
               fontSize: "0.875rem",
-              color: '#64748b',
+              color: "#64748b",
               maxWidth: "740px",
               margin: "0 auto",
               lineHeight: 1.6,
@@ -89,22 +88,25 @@ const Contact = () => {
         >
           {socialPlatforms.map((platform) => {
             const IconComponent = platform.icon;
+            const isTwitter = platform.name === "Twitter";
+            const cardClass = "social-card" + (isTwitter ? " social-card-twitter" : "");
             return (
               <div
                 key={platform.name}
+                className={cardClass}
                 style={{
                   background: "white",
                   borderRadius: "18px",
                   padding: "15px 5px",
                   textAlign: "center",
-                  boxShadow: '0 6px 20px rgba(0,0,0,0.06)',
+                  boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   minHeight: "100px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
-                  
+                  // Let responsive styles handle sizing
                 }}
                 onClick={() => window.open(platform.link, "_blank")}
                 onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
@@ -128,7 +130,7 @@ const Contact = () => {
                 <h3 style={{ fontSize: "0.875rem", fontWeight: 600, marginBottom: "9px", color: "#333" }}>
                   {platform.name}
                 </h3>
-                <p style={{ fontSize: "0.875rem", color: '#64748b', lineHeight: 1.4, padding: "0 5px" }}>
+                <p style={{ fontSize: "0.875rem", color: "#64748b", lineHeight: 1.4, padding: "0 5px" }}>
                   {platform.description}
                 </p>
               </div>
@@ -143,7 +145,7 @@ const Contact = () => {
             borderRadius: "30px",
             padding: "25px 20px",
             textAlign: "center",
-            boxShadow: '0 6px 20px rgba(0,0,0,0.06)',
+            boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
             maxWidth: "650px",
             margin: "0 auto",
           }}
@@ -154,11 +156,10 @@ const Contact = () => {
           <p
             style={{
               fontSize: "0.875rem",
-              color: '#64748b',
+              color: "#64748b",
               margin: "0 auto 25px",
               lineHeight: 1.6,
               maxWidth: "700px",
-
             }}
           >
             Our social media communities are safe spaces where mothers share experiences, ask questions, and support
@@ -218,6 +219,16 @@ const Contact = () => {
           #contact .social-card {
             min-height: 140px;
             padding: 20px 15px;
+          }
+          #contact .social-card-twitter {
+            min-height: 140px !important;
+            height: 140px !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
           }
         }
       `}</style>

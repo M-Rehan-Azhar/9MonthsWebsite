@@ -5,7 +5,7 @@ const QRRegister = () => {
   // Brand gradients/colors
   const mainGradient = 'linear-gradient(to right, #ca2061, #ec7ea3ff)';
   const lightPink = "#ffffff";
-  const cardShadow = "0 6px 20px rgba(202,32,97,0.07)";
+  const cardShadow = "0 2px 8px 0 rgba(202,32,97,0.15)";
   const accentColor = "#ca2061";
 
   return (

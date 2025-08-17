@@ -17,7 +17,7 @@ const About = () => {
         style={{
           width: '100%',
           boxSizing: 'border-box',
-           padding: '5rem 7rem', // increased horizontal padding
+          padding: '5rem 7rem', // desktop default, mobile will override via CSS
         }}
       >
         {/* Heading */}
@@ -43,13 +43,14 @@ const About = () => {
             </span>
           </h2>
           <p
+            id="about-main-paragraph"
             style={{
               fontSize: '0.875rem',
               color: '#64748b',
               maxWidth: 720,
               margin: '0 auto',
               lineHeight: 1.7,
-              textAlign: 'center',
+              textAlign: 'center', // Will override to justify on mobile
             }}
           >
             9Months is a compassionate organization dedicated to supporting pregnant women
@@ -61,12 +62,12 @@ const About = () => {
 
         {/* Cards */}
         <div
+          className="about-cards-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
             gap: '2rem',
             marginBottom: '4rem',
-
           }}
         >
           {[
@@ -87,6 +88,7 @@ const About = () => {
             },
           ].map((item, idx) => (
             <div
+              className="about-card"
               key={idx}
               style={{
                 textAlign: 'center',
@@ -99,6 +101,9 @@ const About = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                maxWidth: 340,
+                margin: '0 auto',
+                border: '1px solid #094acaa5',
               }}
             >
               <div
@@ -126,7 +131,7 @@ const About = () => {
               >
                 {item.title}
               </h3>
-              <p style={{ color: '#64748b', margin: 0, fontSize: '0.875rem' }}>{item.text}</p>
+              <p style={{ color: '#64748b', margin: 0, fontSize: '0.875rem',  }}>{item.text}</p>
             </div>
           ))}
         </div>
@@ -139,7 +144,6 @@ const About = () => {
             padding: '2rem',
             boxShadow: '0 6px 20px rgba(0,0,0,0.06)',
             boxSizing: 'border-box',
-
           }}
         >
           <div
@@ -161,13 +165,14 @@ const About = () => {
                 Our Commitment to Mothers
               </h3>
               <p
+                id="commitment-paragraph"
                 style={{
                   color: '#64748b',
                   lineHeight: 1.7,
                   maxWidth: '800px',
                   margin: '0 auto',
                   fontSize: '0.875rem',
-                  textAlign: 'center',
+                  textAlign: 'center', // Will override to justify on mobile
                 }}
               >
                 At 9Months, we understand that pregnancy is a unique and personal experience.
@@ -214,6 +219,29 @@ const About = () => {
           </div>
         </div>
       </div>
+      {/* Mobile Styles */}
+      <style>{`
+        @media (max-width: 600px) {
+          #about > div {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 2.5rem !important;
+            padding-bottom: 2.5rem !important;
+          }
+          #about-main-paragraph, #commitment-paragraph {
+            text-align: justify !important;
+          }
+          .about-cards-grid {
+            grid-template-columns: 1fr !important;
+            justify-content: center !important;
+          }
+          .about-card {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            max-width: 98vw !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };
